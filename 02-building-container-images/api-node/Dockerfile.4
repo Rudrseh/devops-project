@@ -9,6 +9,8 @@ WORKDIR /usr/src/app
 # dependencies (better layer caching)
 COPY package*.json ./
 
+RUN ls -la
+
 RUN npm install
 
 # Use non-root user
