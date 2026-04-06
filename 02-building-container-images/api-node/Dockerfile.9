@@ -35,7 +35,7 @@ RUN --mount=type=cache,target=/usr/src/app/.npm \
 USER node
 
 # Copy the healthcheck script
-COPY --chown=node:node ./healthcheck/ .
+COPY --chown=node:node ./healthcheck.js/ .
 
 # Copy remaining source code AFTER installing dependencies. 
 # Again, copy only the necessary files
