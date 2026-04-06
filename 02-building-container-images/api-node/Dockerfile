@@ -19,6 +19,6 @@ USER node
 
 # Copy remaining source code AFTER installing dependencies. 
 # Again, copy only the necessary files
-COPY --chown=node:node ./src/ .
+COPY --chown=node:node . .
 
 CMD [ "node", "index.js" ]
