@@ -1,0 +1,32 @@
+services:
+  postgres_db:
+     image: postgres:15.6-alpine
+     environment: 
+       - POSTGRESS_PASSWORD=admin
+     ports: 
+       - 5432:5432
+     networks:
+       - my_network
+     volumes:
+       - pg_data:/var/lib/postgresql/data
+     restart: unless-stopped
+
+  api-node_web:
+     image: api-node
+     build: 
+       context: ../01-example-web-application/
+       dockerfile: ../02-building-container-images/Dockerfile.9
+     init: true
+     ports:
+       - 8080:8080
+     networks:
+       - my_network
+     environment: 
+       -  DATABASE_URL=postgres://postgres:foobarbaz@db:5432/postgres
+     depends_on:
+       - postgres_db
+     restart: unless-stopped
+volumes:
+   pg_data:
+networks:
+   my_network:
