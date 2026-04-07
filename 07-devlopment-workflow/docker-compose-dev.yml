@@ -3,7 +3,7 @@ services:
     image: client-react-vite
     build:
       context: /mnt/c/Users/Ss/devops-project/01-example-web-application/client-react
-      dockerfile: /mnt/c/Users/Ss/devops-project/02-building-container-images/client-react-vite/Dockerfile.3
+      dockerfile: /mnt/c/Users/Ss/devops-project/02-building-container-images/client-react/Dockerfile.3
     init: true
     ports:
       - "5173:5173"
