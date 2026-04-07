@@ -1,20 +1,14 @@
 # Pin specific version
 # Use slim for reduced image size
-FROM node:19.6-bullseye-slim
+FROM node:20-alpine
 
-# Specify working directory other than /
-WORKDIR /usr/src/app
+WORKDIR /app
 
-COPY . .
+COPY package.json .
 
 RUN npm install
 
-# Use non-root user
-# Use --chown on COPY commands to set file permissions
-USER node
+COPY . .
 
-# Copy remaining source code AFTER installing dependencies. 
-# Again, copy only the necessary files
-COPY --chown=node:node ./src/ .
 
 CMD [ "node", "index.js" ]
