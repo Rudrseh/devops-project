@@ -59,7 +59,7 @@ services:
       - type: bind
         source: /mnt/c/Users/Ss/devops-project/01-example-web-application/api-node
         target: /usr/src/app/
-      - tyep: volume
+      - type: volume
         target: /usr/src/app/node_modules
     restart: unless-stopped
   
