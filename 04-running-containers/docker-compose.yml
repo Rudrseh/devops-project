@@ -14,8 +14,8 @@ services:
   api-node_web:
      image: api-node
      build: 
-       context: ../01-example-web-application/
-       dockerfile: ../02-building-container-images/api-node/Dockerfile.4
+       context: ../01-example-web-application/api-node
+       dockerfile: ../02-building-container-images/api-node/Dockerfile.9
      init: true
      ports:
        - 8080:8080
