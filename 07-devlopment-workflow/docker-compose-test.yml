@@ -8,5 +8,5 @@ services:
     command:
       - go
       - test
-      - v
+      - -v
       - ./.. 
