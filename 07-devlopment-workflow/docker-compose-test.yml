@@ -1,0 +1,12 @@
+services:
+  api-node:
+    command:
+      - npm
+      - run
+      - test:watch
+  api-golang:
+    command:
+      - go
+      - test
+      - v
+      - ./.. 
