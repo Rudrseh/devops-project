@@ -1,9 +1,9 @@
 services:
   api-node:
     command:
-      - npm
-      - run
-      - test:watch
+      - "npm"
+      - "run"
+      - "test"
   api-golang:
     command:
       - "go"
