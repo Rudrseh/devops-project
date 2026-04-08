@@ -35,11 +35,11 @@ RUN --mount=type=cache,target=/usr/src/app/.npm \
 USER node
 
 # Copy the healthcheck script
-COPY --chown=node:node ./api-node/healthcheck/ .
+COPY --chown=node:node ./healthcheck/ .
 
 # Copy remaining source code AFTER installing dependencies. 
 # Again, copy only the necessary files
-COPY --chown=node:node ./api-node/src .
+COPY --chown=node:node ./src/ .
 
 # Indicate expected port
 EXPOSE 3000
