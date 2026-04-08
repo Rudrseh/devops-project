@@ -16,7 +16,8 @@ services:
       - type: volume
         target: /usr/src/app/node_modules
       - type: volume
-        target: /mnt/c/Users/Ss/devops-project/03-container-registries/vite.config.js
+        source: /mnt/c/Users/Ss/devops-project/03-container-registries/vite.config.js
+        target: /usr/src/app/vite.config.js
     restart: unless-stopped
 
   api-golang:
