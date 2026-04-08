@@ -6,7 +6,7 @@ services:
       - test:watch
   api-golang:
     command:
-      - go
-      - test
-      - -v
-      - ./.. 
+      - "go"
+      - "test"
+      - "-v"
+      - "./..."
