@@ -11,7 +11,7 @@ services:
       - my-network
     volumes:
       - type: bind
-        source: /mnt/c/Users/Ss/devops-project/01-example-web-application/client-react-vite/
+        source: /mnt/c/Users/Ss/devops-project/01-example-web-application/client-react/
         target: /usr/src/app
       - type: volume
         target: /usr/src/app/node_modules
