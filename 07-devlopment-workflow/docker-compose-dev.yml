@@ -15,7 +15,7 @@ services:
         target: /usr/src/app
       - type: volume
         target: /usr/src/app/node_modules
-      - type: volume
+      - type: bind
         source: /mnt/c/Users/Ss/devops-project/04-running-containers/vite.config.js
         target: /usr/src/app/vite.config.js
     restart: unless-stopped
